@@ -4,7 +4,6 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  //write your code here
   document.querySelector('.card').classList.add(generateRandomSuit());
   document.querySelector('.card').innerHTML = generateRandomNum();
 };
@@ -14,6 +13,7 @@ let generateRandomNum = () => {
   let indexNumbers = Math.floor(Math.random() * numbers.length);
   return numbers[indexNumbers]
 };
+
 let generateRandomSuit = () => {
   let suit = ['diamonds', 'spades', 'hearts', 'clubs'];
   let indexSuit = Math.floor(Math.random() * suit.length);
@@ -24,4 +24,20 @@ document.querySelector('.btn-timer').addEventListener('click', () => {
   setTimeout(() => {
     location.reload()
   }, 10000);
+});
+
+document.querySelector(".width").addEventListener("keydown", function (event) {
+  let card = document.querySelector('.card');
+  if (event.key === "Enter") {
+    let newWidth = event.target.value;
+    card.style.width = newWidth + 'px';
+  }
+});
+
+document.querySelector(".height").addEventListener("keydown", function (event) {
+  let card = document.querySelector('.card');
+  if (event.key === "Enter") {
+    let newHeight = event.target.value;
+    card.style.height = newHeight + 'px';
+  }
 });
