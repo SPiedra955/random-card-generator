@@ -1,9 +1,5 @@
 <!-- hide -->
-# Hello World with Vanilla JS
-
-> 🇪🇸 [Spanish version of this readme is available](./README.es.md).
-<!-- endhide -->
-Start coding a JS/HTML/CSS website in 30 seconds by opening this template using 4Geeks' [One-Click Coding](https://s.4geeks.com/start?repo=https://github.com/4GeeksAcademy/vanillajs-hello) or locally on your computer.
+# Random card generator
 
 ## Before you begin
 
@@ -19,31 +15,31 @@ It depends on the language, but you have `./src/app.js`, `./src/style.css` and `
 
 > Note: remember that the JS workflow starts inside `window.onload`.
 
+## 📝 Instructions
 
-## Troubleshooting
+Create an algorithm that randomly generates a card on each refresh:
 
-### I don't see my changes...
+* Every time the website is refreshed, a new random card should be displayed.
 
-Everytime you change any file inside the `./src` folder the website's public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (`command+shift+r` on Mac, `control+shift+r` on PC & Linux)
+* The card must have one of the following suits: Hearts, Spades, Clubs, or Diamonds.
 
-### How do I include more images in my project?
+* The card value must be one of the following: 2 to 10, King, Queen, Jack, or Ace (no wildcards).
 
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
+At the end, the project should be similar to this demo.
 
-### How do I include more JS files?
+![image](https://github.com/user-attachments/assets/a68bf5fc-ae65-4676-91d9-676a8bfb0fae)
 
-Just add the files into the src folder and import the file/variables into your app.js. E.g: `import myVar from "./file2.js"`
+## 💡 Hints
 
-### How do I publish the website?
+* Remember that the first event in the lifecycle of a website is `onLoad` (your code starts executing there). You should generate a random number between 1 and 4 to choose a suit, and another random number between 0 and 12 to choose the card value.
+* Create a general `.card` class to apply common styles to each card, and an additional CSS class for each suit: `.spade`, `.club`, `.heart`, and `.diamond`.
+* Apply the `.card` class to the entire div, but only apply one of the suit classes at a time, depending on the suit you want to apply. 
+Copy and paste these emojis into your code for the symbols: ♦ ♥ ♠ ♣
 
-We have prepared the boilerplate to be compatible with [vercel](https://vercel.com/), very easy and in just one step! 
-You can read more about [deploying on vercel here](https://4geeks.com/docs/start/deploy-vercel).
+😎 Feeling confident?
+The following requirements are not necessary to complete the project successfully, but you can challenge yourself to try them!
 
-<!-- hide -->
-### Thank you
+* +1 Add a button that generates a new card when clicked.
+* +1 Add a timer that automatically generates a new card every 10 seconds.
+* +1 Allow the user to specify the width and height of the card using text inputs.
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning) or [CyberSecurity Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/cybersecurity)
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
-<!-- endhide -->
